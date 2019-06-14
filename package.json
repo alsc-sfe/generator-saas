@@ -1,0 +1,24 @@
+{
+  "name": "@ali/generator-saas",
+  "version": "1.0.0",
+  "description": "The DEF generator",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "yongbao.fyb",
+  "license": "ISC",
+  "publishConfig": {
+    "registry": "http://registry.npm.alibaba-inc.com"
+  },
+  "dependencies": {
+    "yeoman-generator": "^2.0.1",
+    "chalk": "^2.1.0",
+    "yosay": "^2.0.1"
+  },
+  "devDependencies": {
+  },
+  "readmeFilename": "README.md"
+}

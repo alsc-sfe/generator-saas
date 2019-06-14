@@ -1,0 +1,8 @@
+{
+  "extends": "@alipay/eslint-config-kobe",
+  "rules": {
+    "semi": [2, "always"],
+    "react/jsx-no-bind": [2, { "allowBind": true }],
+    "no-constant-condition": [1, { "checkLoops": false }]
+  }
+}

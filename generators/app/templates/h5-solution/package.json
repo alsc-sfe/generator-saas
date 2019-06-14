@@ -1,0 +1,52 @@
+{
+  "name": "<%= name %>",
+  "version": "1.0.0",
+  "description": "<%= description %>",
+  "author": "<%= author %>",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "clean": "rimraf www _dist _package",
+    "precommit": "lint-staged",
+    "commitmsg": "commitlint -e",
+    "dev": "kobe dev",
+    "h5build": "npm run clean && kobe build && kobe deploy",
+    "inspect": "kobe build --inspect",
+    "lint": "npm run lint:js && npm run lint:style",
+    "lint:js": "eslint .",
+    "lint:style": "stylelint \"**/*.less\" --syntax less"
+  },
+  "dependencies": {
+    "@alipay/kobe-cli": "2",
+    "@alipay/kobe-solution-koubeib-h5": "2"
+  },
+  "devDependencies": {
+    "@alipay/commitlint-config-kobe": "2",
+    "@alipay/eslint-config-kobe": "2",
+    "@alipay/stylelint-config-kobe": "2",
+    "@commitlint/cli": "6",
+    "eslint": "4",
+    "husky": "0.14",
+    "lint-staged": "7",
+    "rimraf": "2",
+    "stylelint": "9"
+  },
+  "engines": {
+    "install-node": "8"
+  },
+  "publishConfig": {
+    "registry": "http://registry.npm.alibaba-inc.com"
+  },
+  "appId": "",
+  "commitlint": {
+    "extends": [
+      "@alipay/commitlint-config-kobe"
+    ]
+  },
+  "lint-staged": {
+    "*.js": "eslint",
+    "*.less": "stylelint --syntax less"
+  }
+}
