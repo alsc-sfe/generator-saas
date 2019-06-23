@@ -1,0 +1,12 @@
+{
+  "type": "saas",
+  "assets": {
+      "type": "builder",
+      "builder": {
+        "name": "@ali/builder-saas",
+        "options": {
+           "source_dest": "dist"
+        }
+      }
+  }
+}

@@ -1,3 +1,0 @@
-# kobe-boilerplate
-
-> kobe boilerplate

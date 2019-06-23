@@ -47,7 +47,7 @@ module.exports = class extends Generator {
 
   writing() {
     console.log(JSON.stringify(this.props, null, 2));
-    const solutionPath = path.join(__dirname, 'templates/h5-solution');
+    const solutionPath = path.join(__dirname, 'templates/pc');
     const distFolder = this.props.name;
 
     this.fs.copy(
