@@ -16,12 +16,8 @@ module.exports = class extends Generator {
         message: 'Please select sass application solution',
         choices: [
           {
-            name: "H5应用",
-            value: "sass-h5-solution"
-          },
-          {
-            name: "PC应用",
-            value: "sass-pc-solution"
+            name: "Saas应用 - PC",
+            value: "sass-pc"
           }
         ]
       }, {
@@ -55,7 +51,7 @@ module.exports = class extends Generator {
       this.destinationPath(path.join(distFolder, 'src'))
     );
 
-    ['abc.json', '.eslintignore', '.eslintrc', '.gitignore', '.stylelintignore', '.stylelintrc', 'commitlint.config.js', 'kobe.config.js', 'mobile.config.js', 'README.md', 'types.d.ts'].forEach(filename => {
+    ['abc.json', '.eslintignore', '.eslintrc', '.gitignore', '.stylelintignore', '.stylelintrc', 'commitlint.config.js', 'saas.config.js', 'mobile.config.js', 'README.md'].forEach(filename => {
       this.fs.copy(
         this.templatePath(`${solutionPath}/${filename}`),
         this.destinationPath(path.join(distFolder, filename))
