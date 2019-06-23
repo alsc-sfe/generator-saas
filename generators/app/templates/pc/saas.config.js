@@ -13,11 +13,11 @@ module.exports = {
   plugins: [{
     kbtracker: {
     },
+    fireworm: false,
+    viewport: false,
   }],
   // 主题配置
   themes: {},
-  // 是否设置viewport
-  viewport: true,
   // 全局head
   heads: [],
   // 全局body
