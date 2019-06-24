@@ -58,6 +58,12 @@ module.exports = class extends Generator {
       );
     });
 
+    // 单独处理_gitignore
+    this.fs.copy(
+      this.templatePath(`${solutionPath}/_gitignore`),
+      this.destinationPath(path.join(distFolder, '.gitignore'))
+    );
+
     ['package.json'].forEach(filename => {
       this.fs.copyTpl(
         this.templatePath(`${solutionPath}/${filename}`),
