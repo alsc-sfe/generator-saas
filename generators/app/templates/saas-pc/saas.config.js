@@ -21,7 +21,7 @@ module.exports = {
     bodies: [],
     // 插件配置
     plugins: [{
-      name: '@ali/saas-plugin-antd',
+      name: '@ali/saas-plugin-fireworm',
       status: true,
       config: {}
     }],

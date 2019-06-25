@@ -16,6 +16,7 @@
     "lint:style": "stylelint \"**/*.less\" --syntax less"
   },
   "dependencies": {
+    "@ali/saas-plugin-fireworm": "1",
     "@alipay/kos-wrapper-pc": "1",
     "antd": "3",
     "classnames": "2"
