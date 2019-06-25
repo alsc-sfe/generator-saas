@@ -8,34 +8,29 @@ module.exports = {
       title: 'test page',
       spmb: '',
       heads: [],
-      bodys: [],
+      bodies: [],
     },
   },
-  // beta验证
-  beta: [
-    '@alipay/saas-plugin-kbtracker',
-  ],
+  // beta验证白名单
+  beta: [],
   // runtime相关配置
   runtime: {
     // 全局head
     heads: [],
     // 全局body
-    bodys: [],
+    bodies: [],
     // 插件配置
     plugins: [{
-      '@alipay/saas-plugin-kbtracker': {
-        status: true,
-        config: {}
-      },
-      '@alipay/saas-plugin-fireworm': {
-        status: true,
-        config: {}
-      },
+      name: '@ali/saas-plugin-antd',
+      status: true,
+      config: {}
     }],
   },
   webpack: {
     // 主题配置
     themes: {},
+    // 开启pxtorem
+    pxtorem: false,
     // 是否开启chunk分析
     analyze: false,
     // 自定义构建配置、config为全局的构建配置
