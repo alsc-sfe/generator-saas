@@ -11,23 +11,31 @@ module.exports = {
       bodys: [],
     },
   },
+  // beta验证
+  beta: [
+    '@alipay/saas-plugin-kbtracker',
+  ],
   // runtime相关配置
   runtime: {
-    // 主题配置
-    themes: {},
     // 全局head
     heads: [],
     // 全局body
     bodys: [],
     // 插件配置
     plugins: [{
-      kbtracker: {
+      '@alipay/saas-plugin-kbtracker': {
+        status: true,
+        config: {}
       },
-      fireworm: false,
-      viewport: false,
+      '@alipay/saas-plugin-fireworm': {
+        status: true,
+        config: {}
+      },
     }],
   },
   webpack: {
+    // 主题配置
+    themes: {},
     // 是否开启chunk分析
     analyze: false,
     // 自定义构建配置、config为全局的构建配置

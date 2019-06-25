@@ -1,8 +1,6 @@
 'use strict';
 const Generator = require('yeoman-generator');
-const chalk = require('chalk');
-const yosay = require('yosay');
-const path = require('path');
+const exec = require('child_process').exec;
 
 module.exports = class extends Generator {
 
@@ -16,8 +14,12 @@ module.exports = class extends Generator {
         message: 'Please select sass application solution',
         choices: [
           {
-            name: "Saas应用 - PC",
-            value: "sass-pc"
+            name: "saas应用 - pc",
+            value: "saas-pc"
+          },
+          {
+            name: "saas插件",
+            value: "saas-plugin"
           }
         ]
       }, {
@@ -36,44 +38,29 @@ module.exports = class extends Generator {
     ];
 
     return this.prompt(prompts).then(props => {
-      // To access props later use this.props.someAnswer;
       this.props = props;
     });
   }
 
   writing() {
-    console.log(JSON.stringify(this.props, null, 2));
-    const solutionPath = path.join(__dirname, 'templates/pc');
-    const distFolder = this.props.name;
-
-    this.fs.copy(
-      this.templatePath(`${solutionPath}/src/**`),
-      this.destinationPath(path.join(distFolder, 'src'))
-    );
-
-    ['abc.json', '.eslintignore', '.eslintrc', '.stylelintignore', '.stylelintrc', 'commitlint.config.js', 'saas.config.js', 'mobile.config.js', 'README.md'].forEach(filename => {
-      this.fs.copy(
-        this.templatePath(`${solutionPath}/${filename}`),
-        this.destinationPath(path.join(distFolder, filename))
-      );
-    });
-
-    // 单独处理_gitignore
-    this.fs.copy(
-      this.templatePath(`${solutionPath}/_gitignore`),
-      this.destinationPath(path.join(distFolder, '.gitignore'))
-    );
-
-    ['package.json'].forEach(filename => {
-      this.fs.copyTpl(
-        this.templatePath(`${solutionPath}/${filename}`),
-        this.destinationPath(path.join(distFolder, filename)),
-        this.props
-      );
-    });
+    console.log(this.props);
+    require(`./writing/${this.props.solution}.js`).bind(this)();
   }
 
   install() {
-    // this.installDependencies();
+    const distFolder = this.props.name;
+    const ps = exec('tnpm ii', {
+      cwd: path.join(process.cwd(), distFolder),
+    }, (err) => {
+      if (err) {
+        console.error(`依赖模块安装失败: ${error}`);
+        return;
+      } else {
+        console.log('依赖模块安装成功');
+      }
+    });
+    ps.stdout.on('data', (data) => {
+      console.log(data);
+    });
   }
 };
