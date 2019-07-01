@@ -1,34 +1,31 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import singleSpaReact from 'single-spa-react';
-import Root from './root-component';
+import React, { PureComponent } from 'react';
+import KOS from 'kos-core';
+import { object, func } from 'prop-types';
+import { page } from '@alipay/kos-wrapper-pc';
+import model from './model';
+import spmConfig from './spm.config';
 
-const reactLifecycles = singleSpaReact({
-  React,
-  ReactDOM,
-  rootComponent: Root,
-  domElementGetter,
-});
+import './style';
 
-export function bootstrap(props) {
-  return reactLifecycles.bootstrap(props);
-}
+@page({ model, spmConfig })
+class Index extends PureComponent {
 
-export function mount(props) {
-  return reactLifecycles.mount(props);
-}
-
-export function unmount(props) {
-  return reactLifecycles.unmount(props);
-}
-
-function domElementGetter() {
-  let el = document.getElementById('react-content');
-  if (!el) {
-    el = document.createElement('div');
-    el.id = 'react-content';
-    document.body.appendChild(el);
+  static propTypes = {
+    userInfo: object,
+    dispatch: func,
   }
 
-  return el;
+  render() {
+    const { userInfo } = this.props;
+
+    return (
+      <div>
+        <a href='#/sample'>#/sample</a>
+        <br />
+        {JSON.stringify(userInfo, null, 2)}
+      </div>
+    );
+  }
 }
+
+export default KOS.Provider.bind(this, Index);
