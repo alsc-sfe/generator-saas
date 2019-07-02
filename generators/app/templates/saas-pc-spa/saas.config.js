@@ -4,15 +4,13 @@ module.exports = {
   // 页面配置
   page: {
     index: {
-      entry: './src/index',
-      js: 'index.js',
+      entry: './src/index.js',
       route: '/index',
       header: false,
       menu: false,
     },
     sample: {
-      entry: './src/sample',
-      js: 'sample.js',
+      entry: './src/sample.js',
       route: '/sample',
       header: false,
       menu: false,
