@@ -4,16 +4,14 @@ module.exports = {
   // 页面配置
   page: {
     index: {
-      entry: './src/index.js',
       route: '/index',
-      header: false,
-      menu: false,
+      header: true,
+      menu: 'boh',
     },
     sample: {
-      entry: './src/sample.js',
       route: '/sample',
-      header: false,
-      menu: false,
+      header: true,
+      menu: 'crm',
     },
   },
   // runtime相关配置
@@ -26,7 +24,7 @@ module.exports = {
     plugins: [{
       name: '@ali/saas-plugin-fireworm',
       status: true, // 是否开启
-      config: {} // 插件相关配置
+      config: {}, // 插件相关配置
     }],
   },
   webpack: {
@@ -35,8 +33,8 @@ module.exports = {
     // 是否开启chunk分析
     analyze: false,
     // 自定义构建配置、config为全局的构建配置
-    config: (webpackConfig) => {
+    config(webpackConfig) {
       return webpackConfig;
-    }
-  }
+    },
+  },
 };

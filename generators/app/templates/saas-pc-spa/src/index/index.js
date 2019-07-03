@@ -1,15 +1,13 @@
 import React, { PureComponent } from 'react';
 import KOS from 'kos-core';
 import { object, func } from 'prop-types';
-import { page } from '@alipay/kos-wrapper-pc';
+import { page } from '../src';
 import model from './model';
 import spmConfig from './spm.config';
-
-import './style';
+import './style.less';
 
 @page({ model, spmConfig })
 class Index extends PureComponent {
-
   static propTypes = {
     userInfo: object,
     dispatch: func,
@@ -20,8 +18,6 @@ class Index extends PureComponent {
 
     return (
       <div>
-        <a href='#/sample'>#/sample</a>
-        <br />
         {JSON.stringify(userInfo, null, 2)}
       </div>
     );

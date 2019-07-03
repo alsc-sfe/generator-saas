@@ -11,7 +11,6 @@ export default {
 
   reducers: {
     initParam(state, action) {
-
       return {
         ...state,
         ...action.payload,
@@ -41,8 +40,9 @@ export default {
   */
   async setup(dispatch, getState, { param }) {
     try {
+      console.log(param);
       dispatch({ type: 'getUserInfo' });
-    } catch(err) {
+    } catch (err) {
       dispatch({ type: 'setErr', payload: err });
     }
   },
