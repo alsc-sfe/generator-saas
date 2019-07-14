@@ -1,4 +1,6 @@
 {
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
   "extends": "@alipay/eslint-config-kobe",
   "rules": {
     "semi": [2, "always"],

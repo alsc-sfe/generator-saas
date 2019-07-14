@@ -19,12 +19,6 @@ class Index extends PureComponent {
     return (
       <div styleName="normal">
         {JSON.stringify(userInfo, null, 2)}
-        <div styleName="nest">嵌套写法</div>
-        <div styleName="mixin-a">MIXIN</div>   
-        <div styleName="operator">运算</div>       
-        <div styleName="function">function</div>
-        <div styleName="animation">animation</div>
-
       </div>
     );
   }

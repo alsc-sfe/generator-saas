@@ -10,7 +10,7 @@ export default {
   },
 
   reducers: {
-    initParam(state, action) {
+    initParam(state: any, action: any) {
       return {
         ...state,
         ...action.payload,
@@ -19,9 +19,9 @@ export default {
   },
 
   asyncs: {
-    async getUserInfo(dispatch, getState, payload) {
+    async getUserInfo(dispatch: any, getStateL: any, payload: any) {
       try {
-        const res = await getUserInfo(payload);
+        const res = await getUserInfo();
         dispatch({ type: 'initParam', payload: { userInfo: res } });
       } catch (err) {
         message.info(err.message);
@@ -38,7 +38,7 @@ export default {
   * @property extra 当调用`this.props.reload`时，传入的参数。
   * @return {any}
   */
-  async setup(dispatch, getState, { param }) {
+  async setup(dispatch: any, getState: any, { param }: any) {
     try {
       console.log(param);
       dispatch({ type: 'getUserInfo' });

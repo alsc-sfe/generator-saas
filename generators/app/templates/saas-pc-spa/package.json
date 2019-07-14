@@ -1,8 +1,8 @@
 {
-  "name": "<%= name %>",
+  "name": "web-boh-org",
   "version": "1.0.0",
-  "description": "<%= description %>",
-  "author": "<%= author %>",
+  "description": "pc人员组织结构前端应用",
+  "author": "",
   "repository": {
     "type": "git",
     "url": ""
@@ -23,13 +23,16 @@
     "classnames": "2",
     "single-spa": "4",
     "single-spa-react": "2",
-    "systemjs": "4"
+    "systemjs": "4",
+    "typescript": "^3.5.3"
   },
   "devDependencies": {
     "@alipay/commitlint-config-kobe": "2",
     "@alipay/eslint-config-kobe": "2",
     "@alipay/stylelint-config-kobe": "2",
     "@commitlint/cli": "6",
+    "@typescript-eslint/eslint-plugin": "^1.11.0",
+    "@typescript-eslint/parser": "^1.11.0",
     "eslint": "4",
     "husky": "0",
     "lint-staged": "7",
