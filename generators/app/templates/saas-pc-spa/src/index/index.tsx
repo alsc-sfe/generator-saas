@@ -6,11 +6,16 @@ import model from './model';
 import spmConfig from './spm.config';
 import './style.less';
 
+interface Props {
+  userInfo: Object,
+  dispatch: any,
+}
+
 @page({ model, spmConfig })
-class Index extends PureComponent {
-  static propTypes = {
-    userInfo: object,
-    dispatch: func,
+class Index extends PureComponent<Props, any> {
+
+  constructor(props: Props) {
+    super(props);
   }
 
   render() {
