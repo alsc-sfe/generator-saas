@@ -1,6 +1,10 @@
 module.exports = {
   // saas应用类型
   sat: 'pc-spa',
+  microConfig: {
+    status: true,
+    appRoute: 'org',
+  },
   // 页面配置
   page: {
     index: {
