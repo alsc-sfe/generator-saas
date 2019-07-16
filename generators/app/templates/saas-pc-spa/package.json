@@ -1,8 +1,8 @@
 {
-  "name": "web-boh-org",
+  "name": "<%= name %>",
   "version": "1.0.0",
-  "description": "pc人员组织结构前端应用",
-  "author": "",
+  "description": "<%= description %>",
+  "author": "<%= author %>",
   "repository": {
     "type": "git",
     "url": ""
@@ -17,10 +17,13 @@
   },
   "dependencies": {
     "@ali/saas-plugin-fireworm": "1",
+    "@ali/stylelint-config-ali": "^0.2.4",
     "@alipay/kos-wrapper-pc": "1",
     "@alipay/mo-alsh-merchant-framework": "1",
     "antd": "3",
     "classnames": "2",
+    "eslint-plugin-react-hooks": "^1.6.1",
+    "eslint-plugin-vue": "^5.2.3",
     "single-spa": "4",
     "single-spa-react": "2",
     "systemjs": "4",
@@ -33,11 +36,12 @@
     "@commitlint/cli": "6",
     "@typescript-eslint/eslint-plugin": "^1.11.0",
     "@typescript-eslint/parser": "^1.11.0",
-    "eslint": "4",
+    "eslint": "^6.0.1",
     "husky": "0",
     "lint-staged": "7",
     "rimraf": "2",
-    "stylelint": "9"
+    "stylelint": "9",
+    "stylelint-scss": "^3.9.1"
   },
   "engines": {
     "install-node": "8"
@@ -51,6 +55,7 @@
     ]
   },
   "lint-staged": {
+    "*.ts": "eslint",
     "*.js": "eslint",
     "*.less": "stylelint --syntax less"
   }
