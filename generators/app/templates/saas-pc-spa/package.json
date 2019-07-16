@@ -21,6 +21,7 @@
     "@alipay/kos-wrapper-pc": "1",
     "@alipay/mo-alsh-merchant-framework": "1",
     "@types/kos-core": "^0.6.0",
+    "@types/react-css-modules": "^4.6.2",
     "antd": "3",
     "classnames": "2",
     "single-spa": "4",
