@@ -5,3 +5,4 @@ npm-debug.log
 /_dist
 /_package
 /build
+__micro_app_config.js
