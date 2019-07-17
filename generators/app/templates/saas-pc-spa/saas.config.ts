@@ -1,21 +1,18 @@
 module.exports = {
   // saas应用类型
   sat: 'pc-spa',
+  // 微应用相关配置
   microConfig: {
     status: true,
-    appRoute: 'org',
+    minAppName: '',
   },
   // 页面配置
   page: {
     index: {
       route: '/index',
-      header: true,
-      menu: 'boh',
     },
     sample: {
       route: '/sample',
-      header: true,
-      menu: 'crm',
     },
   },
   // runtime相关配置
@@ -25,11 +22,7 @@ module.exports = {
     // 全局body
     bodys: [],
     // 插件配置
-    plugins: [{
-      name: '@ali/saas-plugin-fireworm',
-      status: true, // 是否开启
-      config: {}, // 插件相关配置
-    }],
+    plugins: [],
   },
   webpack: {
     // 主题配置
