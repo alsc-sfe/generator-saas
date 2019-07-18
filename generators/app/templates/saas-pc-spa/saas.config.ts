@@ -1,11 +1,6 @@
 module.exports = {
-  // saas应用类型
-  sat: 'pc-spa',
-  // 微应用相关配置
-  microConfig: {
-    status: true,
-    minAppName: '',
-  },
+  appType: 'microapp',
+  miniAppName: '',
   // 页面配置
   page: {
     index: {
@@ -14,15 +9,6 @@ module.exports = {
     sample: {
       route: '/sample',
     },
-  },
-  // runtime相关配置
-  runtime: {
-    // 全局head
-    heads: [],
-    // 全局body
-    bodys: [],
-    // 插件配置
-    plugins: [],
   },
   webpack: {
     // 主题配置
