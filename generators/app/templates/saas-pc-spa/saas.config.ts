@@ -1,8 +1,6 @@
 module.exports = {
-  // saas应用类型
   appType: 'microapp',
-  // 微应用相关配置
-  miniAppName: 'org',
+  miniAppName: '',
   // 页面配置
   page: {
     index: {
@@ -11,15 +9,6 @@ module.exports = {
     sample: {
       route: '/sample',
     },
-  },
-  // runtime相关配置
-  runtime: {
-    // 全局head
-    heads: [],
-    // 全局body
-    bodys: [],
-    // 插件配置
-    plugins: [],
   },
   webpack: {
     // 主题配置
