@@ -1,11 +1,8 @@
 module.exports = {
   // saas应用类型
-  sat: 'pc-spa',
+  appType: 'microapp',
   // 微应用相关配置
-  microConfig: {
-    status: true,
-    minAppName: '',
-  },
+  miniAppName: 'org',
   // 页面配置
   page: {
     index: {
