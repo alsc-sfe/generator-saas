@@ -2,7 +2,7 @@ module.exports = {
   appType: 'microapp',
   microAppName: '',
   // 页面配置
-  modules: {
+  page: {
     index: {
       route: '/index',
     },
