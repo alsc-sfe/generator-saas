@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@ali/saas-plugin-fireworm": "1",
-    "@alipay/kos-wrapper-pc": "1",
+    "@alipay/kos-wrapper-pc": "2",
     "antd": "3",
     "classnames": "2"
   },
