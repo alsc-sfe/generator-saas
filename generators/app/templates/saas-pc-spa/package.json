@@ -18,7 +18,7 @@
   "dependencies": {
     "@ali/saas-plugin-fireworm": "1",
     "@ali/stylelint-config-ali": "^0.2.4",
-    "@alipay/kos-wrapper-pc": "1",
+    "@alipay/kos-wrapper-pc": "2",
     "@alipay/mo-alsh-merchant-framework": "1",
     "@types/kos-core": "^0.6.0",
     "antd": "3",

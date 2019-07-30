@@ -29,4 +29,4 @@ class Index extends PureComponent<Props, any> {
   }
 }
 
-export default KOS.Provider.bind(this, Index);
+export default Index;
