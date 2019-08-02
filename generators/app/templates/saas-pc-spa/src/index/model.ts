@@ -19,7 +19,7 @@ export default {
   },
 
   asyncs: {
-    async getUserInfo(dispatch: any, getStateL: any, payload: any) {
+    async getUserInfo(dispatch: any) {
       try {
         const res = await getUserInfo();
         dispatch({ type: 'initParam', payload: { userInfo: res } });
