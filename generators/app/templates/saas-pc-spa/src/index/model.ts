@@ -33,14 +33,13 @@ export default {
   * 初始化请求
   * @param dispatch
   * @param getState
-  * @param {object}
-  * @property param 请求参数，包括url中的请求参数和离线包的startParams
-  * @property extra 当调用`this.props.reload`时，传入的参数。
+  * @param action {object}
+  * @property action.payload.param 请求参数
   * @return {any}
   */
-  async setup(dispatch: any, getState: any, { param }: any) {
+  async setup(dispatch: any, getState: any, action: any) {
     try {
-      console.log(param);
+      console.log(action.payload.param);
       dispatch({ type: 'getUserInfo' });
     } catch (err) {
       dispatch({ type: 'setErr', payload: err });

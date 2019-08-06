@@ -1,6 +1,6 @@
 {
   "name": "@ali/generator-saas",
-  "version": "1.0.36",
+  "version": "1.0.37",
   "description": "The DEF saas generator for koubei",
   "scripts": {
   },
