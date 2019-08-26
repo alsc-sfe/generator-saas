@@ -14,15 +14,19 @@ module.exports = class extends Generator {
         message: 'Please select sass application solution',
         choices: [
           {
-            name: "Saas多页应用-pc",
-            value: "saas-pc"
+            name: "微应用",
+            value: "saas-microapp"
           },
           {
-            name: "Saas微前端应用-pc",
-            value: "saas-pc-spa"
+            name: "小程序",
+            value: "saas-domino"
           },
           {
-            name: "Saas插件",
+            name: "H5",
+            value: "saas-h5"
+          },
+          {
+            name: "插件",
             value: "saas-plugin"
           }
         ]
