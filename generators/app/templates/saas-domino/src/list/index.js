@@ -9,7 +9,7 @@ Page({
   },
 
   jump() {
-    location.href = './list.html';
+    location.href = './index.html';
   },
 
   submit() {

@@ -1,4 +1,7 @@
 <div class="m-index">
-  <p class="title">首页</p>
-  <Button>测试按钮</Button>
+  <List renderHeader="index.html page">
+    <List.Item extra='{{name}}'>姓名</List.Item>
+    <List.Item extra='go to list page' arrow='horizontal' onClick="{{jump}}">页面跳转</List.Item>
+  </List>
+  <Button onClick="{{submit}}" class="footer-btn">提交</Button>
 </div>

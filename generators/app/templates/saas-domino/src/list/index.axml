@@ -1,0 +1,6 @@
+<div class="m-index">
+  <List renderHeader="list.html title">
+    <List.Item extra='{{name}}'>姓名</List.Item>
+    <List.Item extra='go to index page' arrow='horizontal' onClick="{{jump}}">页面跳转</List.Item>
+  </List>
+</div>

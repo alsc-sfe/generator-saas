@@ -6,9 +6,10 @@ module.exports = {
     index: {
       entry: './src/index',
       title: '首页',
-      spmb: '',
-      heads: [],
-      bodies: [],
+    },
+    list: {
+      entry: './src/index',
+      title: '列表页',
     },
   },
   // runtime相关配置
