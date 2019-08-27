@@ -2,16 +2,15 @@ module.exports = {
   // 应用类型
   appType: 'domino',
   // 页面配置
-  page: {
-    index: {
-      entry: './src/index',
-      title: '首页',
-    },
-    list: {
-      entry: './src/index',
-      title: '列表页',
-    },
-  },
+  page: [{
+    module: 'index',
+    path: './src/index',
+    title: '首页',
+  }, {
+    module: 'list',
+    path: './src/list',
+    title: '列表',
+  }],
   // runtime相关配置
   runtime: {
     // 全局head
