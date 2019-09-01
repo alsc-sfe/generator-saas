@@ -6,9 +6,6 @@ module.exports = {
     index: {
       route: '/index',
     },
-    sample: {
-      route: '/sample',
-    },
   },
   webpack: {
     // 主题配置
