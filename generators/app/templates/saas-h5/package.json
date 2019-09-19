@@ -18,6 +18,7 @@
   "dependencies": {
     "@ali/saas-plugin-fireworm": "1",
     "@alipay/kos-wrapper-pc": "2",
+    "@alipay/mo-alsh-merchant-framework": "^1.0.28",
     "antd": "3",
     "classnames": "2"
   },

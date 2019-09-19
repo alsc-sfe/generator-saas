@@ -2,15 +2,11 @@ module.exports = {
   // saas应用类型
   sat: 'pc',
   // 页面配置
-  page: {
-    index: {
-      entry: './src/index',
-      title: 'test page',
-      spmb: '',
-      heads: [],
-      bodies: [],
-    },
-  },
+  page: [{
+    module: 'index',
+    path: './src/index',
+    title: '页面标题',
+  }],
   // beta验证白名单
   beta: [],
   // runtime相关配置
