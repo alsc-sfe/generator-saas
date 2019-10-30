@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/demo/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "口碑微信小程序模板",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color":"#BFBFBF",
+    "selectedColor": "#EF8140",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./assets/tab/home.png",
+        "selectedIconPath": "./assets/tab/home_select.png"
+      },
+      {
+        "pagePath": "pages/demo/index",
+        "text": "DEMO",
+        "iconPath": "./assets/tab/demo.png",
+        "selectedIconPath": "./assets/tab/demo_select.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

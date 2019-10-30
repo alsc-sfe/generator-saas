@@ -1,0 +1,3 @@
+<view class="kobe-wxmin-container">
+    {{ name }}
+</view>

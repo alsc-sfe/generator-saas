@@ -28,7 +28,11 @@ module.exports = class extends Generator {
           {
             name: "插件",
             value: "saas-plugin"
-          }
+          },
+          {
+            name: "SAAS 小程序",
+            value: "saas-mini-program"
+          },
         ]
       }, {
         type: 'input',
@@ -57,6 +61,11 @@ module.exports = class extends Generator {
 
   install() {
     const distFolder = this.props.name;
+    // to do 小程序solution 需要在安装结束额外定制install
+    // 计划1期. 将node_modules中自定义内容复制到pages/components中
+    // 计划2期. 增量更新等
+    const solution = this.props.solution;
+
     const ps = exec('tnpm ii', {
       cwd: path.join(process.cwd(), distFolder),
     }, (err) => {
