@@ -66,7 +66,7 @@ module.exports = class extends Generator {
     // 计划2期. 增量更新等
     const solution = this.props.solution;
 
-    const ps = exec('tnpm ii', {
+    const ps = exec('npm i', {
       cwd: path.join(process.cwd(), distFolder),
     }, (err) => {
       if (err) {
