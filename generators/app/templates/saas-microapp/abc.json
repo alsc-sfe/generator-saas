@@ -3,7 +3,7 @@
   "assets": {
       "type": "builder",
       "builder": {
-        "name": "@ali/builder-saas-spa",
+        "name": "@saasfe/builder-saas-spa",
         "options": {
            "source_dest": "dist"
         }
