@@ -16,10 +16,7 @@
     "lint:style": "stylelint \"**/*.less\" --syntax less"
   },
   "dependencies": {
-    "@ali/saas-plugin-fireworm": "1",
-    "@ali/stylelint-config-ali": "^0.2.4",
-    "@alipay/kos-wrapper-pc": "2",
-    "@alipay/mo-alsh-merchant-framework": "1",
+    "stylelint-config-ali": "^0.2.4",
     "@types/kos-core": "^0.6.0",
     "antd": "3",
     "classnames": "2",
@@ -29,9 +26,6 @@
     "typescript": "^3.5.3"
   },
   "devDependencies": {
-    "@alipay/commitlint-config-kobe": "2",
-    "@alipay/eslint-config-kobe": "2",
-    "@alipay/stylelint-config-kobe": "2",
     "@commitlint/cli": "6",
     "@typescript-eslint/eslint-plugin": "^1.11.0",
     "@typescript-eslint/parser": "^1.11.0",
@@ -52,11 +46,6 @@
   },
   "publishConfig": {
     "registry": "http://registry.npm.alibaba-inc.com"
-  },
-  "commitlint": {
-    "extends": [
-      "@alipay/commitlint-config-kobe"
-    ]
   },
   "lint-staged": {
     "*.ts": "eslint",

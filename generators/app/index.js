@@ -70,7 +70,7 @@ module.exports = class extends Generator {
       cwd: path.join(process.cwd(), distFolder),
     }, (err) => {
       if (err) {
-        console.error(`依赖模块安装失败: ${error}`);
+        console.error(`依赖模块安装失败: ${err}`);
         return;
       } else {
         console.log('依赖模块安装成功');

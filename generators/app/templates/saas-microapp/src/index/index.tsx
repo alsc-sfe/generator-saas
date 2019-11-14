@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react';
-import { page } from '@alipay/kos-wrapper-pc';
 import model from './model';
 import './style.less';
 
@@ -8,7 +7,6 @@ interface Props {
   dispatch: any;
 }
 
-@page({ model })
 class Index extends PureComponent<Props, any> {
 
   public componentDidMount() {
