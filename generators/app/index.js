@@ -1,6 +1,7 @@
 'use strict';
 const Generator = require('yeoman-generator');
 const exec = require('child_process').exec;
+const Ora = require('ora');
 
 module.exports = class extends Generator {
 
@@ -65,10 +66,11 @@ module.exports = class extends Generator {
     // 计划1期. 将node_modules中自定义内容复制到pages/components中
     // 计划2期. 增量更新等
     const solution = this.props.solution;
-
+    const spinner = Ora('开始安装依赖模块').start()
     const ps = exec('npm i', {
       cwd: path.join(process.cwd(), distFolder),
     }, (err) => {
+      spinner.stop();
       if (err) {
         console.error(`依赖模块安装失败: ${err}`);
         return;
