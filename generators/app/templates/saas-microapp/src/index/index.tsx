@@ -1,12 +1,14 @@
 import React, { PureComponent } from 'react';
 import model from './model';
 import './style.less';
+import KOS, { KosDispatch } from 'kos-core';
 
 interface Props {
   userInfo: object;
-  dispatch: any;
+  dispatch: KosDispatch;
 }
 
+@KOS.WrapperProvider({ model })
 class Index extends PureComponent<Props, any> {
 
   public componentDidMount() {

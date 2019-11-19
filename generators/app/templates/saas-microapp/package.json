@@ -20,6 +20,7 @@
     "@types/kos-core": "^0.6.0",
     "antd": "3",
     "classnames": "2",
+    "kos-core": "^2.7.2",
     "single-spa": "4",
     "single-spa-react": "2",
     "systemjs": "4",

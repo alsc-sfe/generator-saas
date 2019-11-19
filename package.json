@@ -1,6 +1,6 @@
 {
   "name": "@saasfe/generator-saas",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "The KOS saas generator",
   "scripts": {},
   "repository": {
@@ -13,6 +13,7 @@
     "registry": "http://registry.npmjs.org/"
   },
   "dependencies": {
+    "@types/node": "^12.12.8",
     "chalk": "^2.1.0",
     "ora": "^4.0.3",
     "yeoman-generator": "^2.0.1",

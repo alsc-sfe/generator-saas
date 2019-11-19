@@ -2,11 +2,10 @@ module.exports = {
   appType: 'microapp',
   microAppName: 'common',
   // 页面配置
-  page: {
-    index: {
-      route: '/index',
-    },
-  },
+  page: [{
+    module: 'index',
+    route: '/index',  
+  }],
   webpack: {
     // 主题配置
     themes: {},
