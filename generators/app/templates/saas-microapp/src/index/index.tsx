@@ -20,7 +20,7 @@ class Index extends PureComponent<Props, any> {
 
     return (
       <div className="normal">
-        {JSON.stringify(userInfo, null, 2)}
+        {JSON.stringify(userInfo, null, 2)}HELLO MICROAPP
       </div>
     );
   }

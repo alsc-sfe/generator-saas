@@ -1,5 +1,5 @@
 {
-  "extends": "@ali/stylelint-config-ali",
+  "extends": "stylelint-config-ali",
   "rules": {
     "selector-max-id": 0,
     "selector-max-type": 0,
