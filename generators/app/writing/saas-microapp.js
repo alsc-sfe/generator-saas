@@ -9,7 +9,18 @@ module.exports = function () {
     this.destinationPath(path.join(distFolder, 'src'))
   );
 
-  ['abc.json', '.eslintignore', '.eslintrc', '.stylelintignore', '.stylelintrc', 'commitlint.config.ts', 'app.config.ts', 'README.md', 'tsconfig.json'].forEach(filename => {
+  [
+    'abc.json',
+    '.eslintignore',
+    '.eslintrc',
+    '.stylelintignore',
+    '.stylelintrc',
+    'commitlint.config.ts',
+    'app.config.ts',
+    'README.md',
+    'tsconfig.json',
+    'Jenkinsfile'
+  ].forEach(filename => {
     this.fs.copy(
       this.templatePath(`${solutionPath}/${filename}`),
       this.destinationPath(path.join(distFolder, filename))
