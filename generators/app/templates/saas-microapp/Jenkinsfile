@@ -6,6 +6,7 @@ pipeline {
         sh "echo 'git'"
         sh 'git clean -xfd'
         git branch: "${params.gitBranch}", url: "${gitUrl}"
+        sh 'git merge remotes/origin/master'
       }
     }
     stage('Build Project') {
@@ -14,7 +15,7 @@ pipeline {
           sh "echo 'build'"
           sh 'cnpm install'
           sh 'ls'
-          sh 'kos build --env ${buildEnv} --version ${branchVersion}'
+          sh 'kos build --appName ${appName} --env ${buildEnv} --version ${branchVersion}'
           sh 'ls build'
         }
       }
@@ -29,7 +30,7 @@ pipeline {
     }
   }
   parameters {
-    choice(name: 'buildEnv', choices: ['daily','pre','prod'], description: '将应用部署到以下环境')
+    choice(name: 'buildEnv', choices: ['project','daily','pre','prod'], description: '将应用部署到以下环境')
     gitParameter(name: 'gitBranch', defaultValue: 'master', branchFilter: 'origin/(.*)', type: 'PT_BRANCH', listSize: '10')
     text(name: 'branchVersion', description: '应用迭代号')
     text(name: 'appName', description: '应用名称')
