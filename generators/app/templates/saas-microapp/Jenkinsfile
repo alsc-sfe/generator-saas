@@ -13,6 +13,7 @@ pipeline {
       steps {
         script{
           sh "echo 'build'"
+          sh "npm-cli-login -u choicefepublic -p mRsMBN6SB148QnX7 -e feteam@choicesoft.com.cn"
           sh 'cnpm install'
           sh 'ls'
           sh 'kos build --appName ${appName} --env ${buildEnv} --version ${branchVersion}'
