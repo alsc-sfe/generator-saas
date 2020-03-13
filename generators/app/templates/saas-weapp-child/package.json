@@ -16,15 +16,10 @@
     "lint:style": "stylelint \"**/*.less\" --syntax less"
   },
   "dependencies": {
-    "stylelint-config-ali": "^0.2.4",
     "@types/kos-core": "^0.6.0",
     "antd": "3",
     "classnames": "2",
-    "kos-core": "^2.7.2",
-    "single-spa": "4",
-    "single-spa-react": "2",
-    "systemjs": "4",
-    "typescript": "^3.5.3"
+    "kos-core": "^2.7.2"
   },
   "devDependencies": {
     "@commitlint/cli": "6",
@@ -40,7 +35,9 @@
     "lint-staged": "7",
     "rimraf": "2",
     "stylelint": "9",
-    "stylelint-scss": "^3.9.1"
+    "stylelint-scss": "^3.9.1",
+    "stylelint-config-ali": "^0.2.4",
+    "typescript": "^3.5.3"
   },
   "engines": {
     "install-node": "8"

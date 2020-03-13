@@ -1,5 +1,6 @@
 module.exports = {
   appType: 'weAppHost',
+  // 页面标题
   title: '云平台',
 
   webpack: {
@@ -10,7 +11,7 @@ module.exports = {
     // dev启动配置
     devServer: {
       host: 'local.koubei.test',
-      path: 'common/index',
+      path: '/',
       query: {
       },
     },
