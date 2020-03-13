@@ -63,13 +63,13 @@ export default [
     hookName: 'pageContainer',
     config: {
       specialSelectors: {
-        'bcommon__navbar': '.__common_navbar',
-        'bcommon__menu': '.__common_menu',
+        'boh-layout__navbar': '.__common_navbar',
+        'boh-layout__menu': '.__common_menu',
       },
     },
     scopes: [
-      'bcommon/navbar',
-      'bcommon/menu',
+      'boh-layout/navbar',
+      'boh-layout/menu',
     ],
   },
   {
@@ -84,7 +84,7 @@ export default [
       page: {
         url: [Promise.resolve(Page404)],
       },
-      excludePages: ['bcommon/navbar', 'bcommon/menu'],
+      excludePages: ['boh-layout/navbar', 'boh-layout/menu'],
     },
   },
   {
@@ -93,7 +93,7 @@ export default [
       page: {
         url: [Promise.resolve(Page403)],
       },
-      excludePages: ['bcommon/navbar', 'bcommon/menu'],
+      excludePages: ['boh-layout/navbar', 'boh-layout/menu'],
       check403: async (pageAuth: any) => {
         const n = Math.random();
         const hasOrg = n < 0.2;
