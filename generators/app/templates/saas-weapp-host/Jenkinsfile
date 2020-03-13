@@ -1,0 +1,39 @@
+pipeline {
+  agent any
+  stages {
+    stage('Git Parameter') {
+      steps {
+        sh "echo 'git'"
+        sh 'git clean -xfd'
+        git branch: "${params.gitBranch}", url: "${gitUrl}"
+        sh 'git merge remotes/origin/master'
+      }
+    }
+    stage('Build Project') {
+      steps {
+        script{
+          sh "echo 'build'"
+          sh 'cnpm install'
+          sh 'ls'
+          sh 'kos build --appName ${appName} --env ${buildEnv} --version ${branchVersion}'
+          sh 'ls build'
+        }
+      }
+    }
+    stage('Deploy to enviroment') {
+      steps {
+        script{
+          sh "echo 'upload'"
+          sh 'choice-upload --token acs:ram::1255018315650120:role/ramoss --app ${appName} --appversion ${branchVersion} --env ${buildEnv} --folder ./build'
+        }
+      }
+    }
+  }
+  parameters {
+    choice(name: 'buildEnv', choices: ['project','daily','pre','prod'], description: '将应用部署到以下环境')
+    gitParameter(name: 'gitBranch', defaultValue: 'master', branchFilter: 'origin/(.*)', type: 'PT_BRANCH', listSize: '10')
+    text(name: 'branchVersion', description: '应用迭代号')
+    text(name: 'appName', description: '应用名称')
+    text(name: 'gitUrl', description: '应用git地址')
+  }
+}
