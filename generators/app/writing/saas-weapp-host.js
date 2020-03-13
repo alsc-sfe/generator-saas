@@ -10,16 +10,17 @@ module.exports = function () {
   );
 
   [
-    'abc.json',
+    '.editorconfig',
     '.eslintignore',
     '.eslintrc',
     '.stylelintignore',
     '.stylelintrc',
-    'commitlint.config.ts',
+    'abc.json',
     'app.config.ts',
+    'commitlint.config.ts',
+    'Jenkinsfile',
     'README.md',
     'tsconfig.json',
-    'Jenkinsfile'
   ].forEach(filename => {
     this.fs.copy(
       this.templatePath(`${solutionPath}/${filename}`),

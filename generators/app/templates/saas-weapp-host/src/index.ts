@@ -35,7 +35,7 @@ configHooks(hookConfigs);
 
 // 注册子应用列表
 // 本地开发使用配置
-const localAppListKey: Symbol = Symbol.for('microAppsInfo');
+const localAppListKey: symbol = Symbol.for('microAppsInfo');
 // @ts-ignore
 const localAppList = window[localAppListKey] as any;
 // 线上运行使用远程配置文件
