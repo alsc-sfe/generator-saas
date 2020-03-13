@@ -1,16 +1,16 @@
 {
   "name": "@saasfe/generator-saas",
-  "version": "0.0.8",
+  "version": "1.0.0",
   "description": "The KOS saas generator",
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/alsc-sfe/generator-saas"
   },
   "author": "yongbao.fyb",
   "license": "ISC",
   "publishConfig": {
-    "registry": "http://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
     "@types/node": "^12.12.8",
