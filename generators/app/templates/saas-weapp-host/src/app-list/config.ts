@@ -1,22 +1,18 @@
+window.MicroAppLoader = {
+  routerType: '/',
+  RouterType: {
+    browser: '/',
+    hash: '#/',
+  },
+};
+
 export default [
-  'alsc-saas/web-data-analysis/0.3.3',
-  'alsc-saas/web-boh-common/1.3.4',
-  'alsc-saas/web-boh-setting/1.1.3',
-  'alsc-saas/web-crm-personal/1.2.0',
-  'alsc-saas/web-boh-org/1.0.6',
-  'alsc-saas/web-crm-member-mall/2.0.4',
-  'alsc-saas/web-crm-dashboard/1.2.7',
-  'alsc-saas/web-boh-pay-account/1.0.3',
-  'alsc-saas/web-boh-print/1.0.2',
-  'alsc-saas/web-crm-contract/1.0.2',
-  'alsc-saas/web-crm-l100/1.0.2',
-  'alsc-saas/web-crm-marketing/1.7.3',
-  'alsc-saas/web-crm-card/1.0.25',
-  'alsc-saas/web-boh-dish/1.0.3',
-  'alsc-saas/web-boh-webpos/1.0.7',
-  'alsc-saas/web-boh-data-stored/1.1.8',
-  'alsc-saas/web-crm-channel/3.1.1',
-  'alsc-saas/web-crm-member/2.1.0',
-  'alsc-saas/web-crm-rights/2.0.2',
-  'alsc-saas/web-crm-rules/3.0.4',
+  'report-operation/daily/1.0.3',
+  'boh-dish/daily/1.0.7',
+  'boh-layout/daily/1.0.3',
+  'report-financing/daily/1.0.3',
+  'report-sell/daily/1.0.3',
+  'boh-ordering-food/daily/1.0.1',
+  'boh-on-credit/daily/1.0.1',
+  'groupon-authorize/daily/1.0.0',
 ];

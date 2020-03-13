@@ -9,18 +9,18 @@ export default [
         '//at.alicdn.com/t/font_825912_8drbhr0dp7i.css',
         'https://gw.alipayobjects.com/os/lib/antd/3.25.2/dist/antd.css',
 
-        'https://gw.alipayobjects.com/as/g/component/babel-polyfill/6.20.0/polyfill.min.js',
+        // 'https://gw.alipayobjects.com/as/g/component/babel-polyfill/6.20.0/polyfill.min.js',
 
-        'https://gw.alipayobjects.com/os/lib/systemjs/6.1.4/dist/system.min.js',
+        // 'https://gw.alipayobjects.com/os/lib/systemjs/6.1.4/dist/system.min.js',
         'https://gw.alipayobjects.com/os/lib/systemjs/6.1.4/dist/extras/named-register.min.js',
 
-        env === 'prod' ?
-        'https://gw.alipayobjects.com/os/lib/react/16.8.6/umd/react.production.min.js' :
-        'https://gw.alipayobjects.com/os/lib/react/16.8.6/umd/react.development.js',
+        // env === 'prod' ?
+        // 'https://gw.alipayobjects.com/os/lib/react/16.8.6/umd/react.production.min.js' :
+        // 'https://gw.alipayobjects.com/os/lib/react/16.8.6/umd/react.development.js',
 
-        env === 'prod' ?
-        'https://gw.alipayobjects.com/os/lib/react-dom/16.8.6/umd/react-dom.production.min.js' :
-        'https://gw.alipayobjects.com/os/lib/react-dom/16.8.6/umd/react-dom.development.js',
+        // env === 'prod' ?
+        // 'https://gw.alipayobjects.com/os/lib/react-dom/16.8.6/umd/react-dom.production.min.js' :
+        // 'https://gw.alipayobjects.com/os/lib/react-dom/16.8.6/umd/react-dom.development.js',
 
         'https://gw.alipayobjects.com/os/lib/moment/2.24.0/min/moment.min.js',
         'https://gw.alipayobjects.com/os/lib/moment/2.24.0/locale/zh-cn.js',
