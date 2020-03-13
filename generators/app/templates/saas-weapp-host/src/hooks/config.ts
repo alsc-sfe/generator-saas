@@ -1,32 +1,41 @@
 import { Page404, Page403, Page500, Loading } from './components';
+import { env } from '../utils/env';
 
 export default [
   {
     hookName: 'basicLibs',
     config: {
       url: [
-        'https://gw.alipayobjects.com/os/lib/alife/cook-pc/3.22.7-beta.7/dist/antd.min.css',
-        'https://gw.alipayobjects.com/os/mentor/saas-node-crm-main/1.0.19/umd/index.css',
+        '//at.alicdn.com/t/font_825912_8drbhr0dp7i.css',
+        'https://gw.alipayobjects.com/os/lib/antd/3.25.2/dist/antd.css',
 
-        'https://gw.alipayobjects.com/os/lib/core-js-bundle/3.1.4/minified.js',
-        'https://gw.alipayobjects.com/os/lib/regenerator-runtime/0.13.3/runtime.js',
-        'https://gw.alipayobjects.com/os/lib/systemjs/4.1.1/dist/system.min.js',
-        'https://gw.alipayobjects.com/os/lib/systemjs/4.1.1/dist/extras/named-register.min.js',
-        'https://gw.alipayobjects.com/os/lib/react/16.8.6/umd/react.production.min.js',
-        'https://gw.alipayobjects.com/os/lib/react-dom/16.8.6/umd/react-dom.production.min.js',
+        'https://gw.alipayobjects.com/as/g/component/babel-polyfill/6.20.0/polyfill.min.js',
+
+        'https://gw.alipayobjects.com/os/lib/systemjs/6.1.4/dist/system.min.js',
+        'https://gw.alipayobjects.com/os/lib/systemjs/6.1.4/dist/extras/named-register.min.js',
+
+        env === 'prod' ?
+        'https://gw.alipayobjects.com/os/lib/react/16.8.6/umd/react.production.min.js' :
+        'https://gw.alipayobjects.com/os/lib/react/16.8.6/umd/react.development.js',
+
+        env === 'prod' ?
+        'https://gw.alipayobjects.com/os/lib/react-dom/16.8.6/umd/react-dom.production.min.js' :
+        'https://gw.alipayobjects.com/os/lib/react-dom/16.8.6/umd/react-dom.development.js',
+
         'https://gw.alipayobjects.com/os/lib/moment/2.24.0/min/moment.min.js',
         'https://gw.alipayobjects.com/os/lib/moment/2.24.0/locale/zh-cn.js',
-        'https://gw.alipayobjects.com/os/lib/alife/cook-pc/3.22.7-beta.7/dist/antd-with-locales.min.js',
+
+        'https://gw.alipayobjects.com/os/lib/antd/3.25.2/dist/antd-with-locales.js',
         'https://gw.alipayobjects.com/os/lib/ant-design/icons/2.1.1/lib/umd.js',
-        'https://gw.alipayobjects.com/os/mentor/saas-fetch/2.0.6/umd/saas-fetch-min.js',
-        'https://gw.alipayobjects.com/os/mentor/saas-fetch-mtop/1.0.9/umd/saas-fetch-mtop.js',
+
+        'https://gw.alipayobjects.com/os/mentor/saas-fetch/2.0.9/umd/saas-fetch-min.js',
+        'https://gw.alipayobjects.com/os/mentor/saas-fetch-choice/1.0.2/umd/saas-fetch-choice-min.js',
+
         'https://g.alicdn.com/code/npm/@alife/system-react/1.0.1/library/umd/react-min.js',
         'https://g.alicdn.com/code/npm/@alife/system-react-dom/1.0.0/library/umd/react-dom-min.js',
         'https://g.alicdn.com/code/npm/@alife/system-antd/1.0.1/library/umd/antd-min.js',
-        'https://g.alicdn.com/code/npm/@alife/system-cook-pc/1.0.0/library/umd/cook-pc-min.js',
         'https://g.alicdn.com/code/npm/@alife/system-ant-design-icons/1.0.1/library/umd/ant-design-icons-min.js',
         'https://g.alicdn.com/code/npm/@alife/system-saas-fetch/1.0.0/library/umd/saas-fetch-min.js',
-        'https://g.alicdn.com/code/npm/@alife/system-saas-fetch-mtop/1.0.1/library/umd/saas-fetch-mtop-min.js',
       ],
     },
   },

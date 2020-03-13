@@ -7,7 +7,7 @@ module.exports = class extends Generator {
 
   // 命令行交互选择项
   prompting() {
-    this.log(`欢迎使用sass套件`);
+    this.log(`欢迎使用SaaS套件`);
 
     const prompts = [{
         type: 'list',
@@ -15,8 +15,16 @@ module.exports = class extends Generator {
         message: 'Please select sass application solution',
         choices: [
           {
-            name: "微应用",
+            name: "微应用(将废弃)",
             value: "saas-microapp"
+          },
+          {
+            name: "微应用--子应用",
+            value: "saas-weapp-child"
+          },
+          {
+            name: "微应用--父应用",
+            value: "saas-weapp-host"
           },
           {
             name: "小程序",

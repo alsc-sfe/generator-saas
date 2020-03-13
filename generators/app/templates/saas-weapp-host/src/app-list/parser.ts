@@ -1,16 +1,15 @@
 import { WeAppListParser } from "@saasfe/we-app/lib/weapp/product";
 import { WeAppConfig } from "@saasfe/we-app/lib/weapp/weapp";
+import { cdnHost } from "../utils/env";
 
-export const parseAppList: WeAppListParser = async function parseAppList(microAppsInfo: any, opts = { context: {} }) {
-  const microAppNames = Object.keys(microAppsInfo);
-  return microAppNames.map((appName) => {
-    const appVersion = microAppsInfo[appName];
+export const parseAppList: WeAppListParser = async function parseAppList(microAppNames: string[], opts = { context: {} }) {
+  return microAppNames.map((appConfigPath) => {
     const microAppInfo: WeAppConfig = {
-      url: `https://g.alicdn.com/${appName}/${appVersion}/app-config.js`,
+      url: `//${cdnHost}/${appConfigPath}/app-config.js`,
     };
 
-    if (/app-config/g.test(appVersion)) {
-      microAppInfo.url = appVersion;
+    if (/app-config/g.test(appConfigPath)) {
+      microAppInfo.url = appConfigPath;
     }
 
     return microAppInfo;

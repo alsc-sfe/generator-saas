@@ -1,0 +1,61 @@
+@nice-bg: yellow;
+.normal {
+  background: @nice-bg;
+  .nest {
+    font-size: 60px;
+  }
+}
+
+.mixin(@color: black; @margin: 10px; @padding: 20px) {
+  color: @color;
+  margin: @margin;
+  padding: @padding;
+}
+.mixin-a {
+  .mixin(@margin: 20px; @color: #33acfe);
+}
+
+.operator {
+  @base: 5%;
+  @filler: @base * 2;
+  @other: @base + @filler;
+
+  color: #888 / 4;
+  background-color: #232 + #111;
+  height: 100% / 2 + @filler;
+}
+
+.function {
+  @base: #f04615;
+  @width: 0.5;
+  width: percentage(@width); // returns `50%`
+  color: saturate(@base, 5%);
+  background-color: spin(lighten(@base, 25%), 8);
+}
+
+@keyframes changebox {
+  10% {
+    background: red;
+  }
+  50% {
+    width: 80px;
+  }
+  70% {
+    border: 15px solid yellow;
+  }
+  100% {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+.animation {
+  height: 100px;
+  width: 100px;
+  border: 15px solid black;
+  animation: changebox 1s ease-in-out 1s infinite alternate running forwards;
+}
+
+.animation:hover {
+  animation-play-state: paused;
+}

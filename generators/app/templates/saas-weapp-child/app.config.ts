@@ -1,7 +1,11 @@
 module.exports = {
-  appType: 'weAppHost',
-  title: '云平台',
-
+  appType: 'weAppChild',
+  microAppName: 'common',
+  // 页面配置
+  page: [{
+    module: 'index',
+    route: '/index',
+  }],
   webpack: {
     // 主题配置
     themes: {},

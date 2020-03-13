@@ -1,0 +1,57 @@
+{
+  "name": "<%= name %>",
+  "version": "1.0.0",
+  "description": "<%= description %>",
+  "author": "<%= author %>",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "clean": "rimraf www _dist _package",
+    "precommit": "lint-staged",
+    "commitmsg": "commitlint -e",
+    "lint": "npm run lint:js && npm run lint:style",
+    "lint:js": "eslint ./src --ext '.ts,.tsx,.js,.jsx'",
+    "lint:style": "stylelint \"**/*.less\" --syntax less"
+  },
+  "dependencies": {
+    "stylelint-config-ali": "^0.2.4",
+    "@types/kos-core": "^0.6.0",
+    "antd": "3",
+    "classnames": "2",
+    "kos-core": "^2.7.2",
+    "single-spa": "4",
+    "single-spa-react": "2",
+    "systemjs": "4",
+    "typescript": "^3.5.3"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "6",
+    "@typescript-eslint/eslint-plugin": "^1.11.0",
+    "@typescript-eslint/parser": "^1.11.0",
+    "eslint": "^5.16.0",
+    "eslint-config-ali": "^7.1.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-react": "^7.14.2",
+    "eslint-plugin-react-hooks": "^1.6.1",
+    "eslint-plugin-vue": "^5.2.3",
+    "husky": "0",
+    "lint-staged": "7",
+    "rimraf": "2",
+    "stylelint": "9",
+    "stylelint-scss": "^3.9.1"
+  },
+  "engines": {
+    "install-node": "8"
+  },
+  "publishConfig": {
+    "registry": "http://registry.npm.alibaba-inc.com"
+  },
+  "lint-staged": {
+    "*.ts": "eslint",
+    "*.tsx": "eslint",
+    "*.js": "eslint",
+    "*.less": "stylelint --syntax less"
+  }
+}
