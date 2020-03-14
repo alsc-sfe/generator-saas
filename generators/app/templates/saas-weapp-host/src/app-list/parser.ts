@@ -11,7 +11,7 @@ const parseWeAppNames: AppListParser = async function parseAppList(weAppNames: s
     }
 
     const weAppList: AppConfig = {
-      url: `//${cdnHost}/web/dist/${appConfigPath}/app-config.js`,
+      url: `${cdnHost}/web/dist/${appConfigPath}/app-config.js`,
     };
 
     if (/app-config/g.test(appConfigPath)) {
