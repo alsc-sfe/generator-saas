@@ -8,6 +8,7 @@ const reactRender: Render = {
   mount(Component: any, container: Element, customProps = {}) {
     const { pageScope = {}, basename } = customProps;
     const { appName } = pageScope;
+    // @ts-ignore
     const { route, routeIgnore, layout } = pageScope.getConfig();
     const routerType = pageScope.getRouterType();
 
