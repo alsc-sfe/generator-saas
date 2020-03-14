@@ -16,11 +16,12 @@
     "lint:style": "stylelint \"**/*.less\" --syntax less"
   },
   "dependencies": {
+    "@choicefe/pc-we-app-layout": "^1.1.16",
     "@choicefe/we-app-generator": "^0.0.1",
     "@saasfe/we-app": "^1.0.5",
+    "@saasfe/we-app-react-router": "^1.1.3",
     "@types/react": "^16.9.23",
     "@types/react-dom": "^16.9.5",
-    "choice-cbm": "^1.0.12",
     "classnames": "^2.2.6",
     "react": "^16.13.0",
     "react-dom": "^16.13.0"

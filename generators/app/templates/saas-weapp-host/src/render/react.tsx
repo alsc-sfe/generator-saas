@@ -1,17 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Render } from '@saasfe/we-app/lib/weapp/base';
-import { ChoiceLayout } from 'choice-cbm';
+import { Router, Route } from '@saasfe/we-app-react-router';
+import ChoiceLayout from '@choicefe/pc-we-app-layout';
 
 const reactRender: Render = {
-  mount(Component: any, container?: Element, customProps?: any) {
-    const { pageScope } = customProps;
-    const layout = pageScope.getConfig('layout');
+  mount(Component: any, container: Element, customProps = {}) {
+    const { pageScope = {}, basename } = customProps;
+    const { appName } = pageScope;
+    const { route, routeIgnore, layout } = pageScope.getConfig();
+    const routerType = pageScope.getRouterType();
 
     ReactDOM.render(
-      <ChoiceLayout {...layout} emptyLayout={!layout}>
-        <Component {...customProps} />
-      </ChoiceLayout>,
+      (
+        <Router
+          microAppName={appName as string}
+          routerType={routerType}
+          basename={basename as string}
+        >
+          <Route
+            route={route}
+            routeIgnore={routeIgnore}
+            microAppName={appName}
+          >
+            <ChoiceLayout {...layout} emptyLayout={!layout}>
+              <Component {...customProps} />
+            </ChoiceLayout>
+          </Route>
+        </Router>
+      ),
       container as Element
     );
   },

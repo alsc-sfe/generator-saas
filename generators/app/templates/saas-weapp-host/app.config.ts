@@ -11,7 +11,7 @@ module.exports = {
     // dev启动配置
     devServer: {
       host: 'local.koubei.test',
-      path: '/',
+      path: '',
       query: {
       },
     },
