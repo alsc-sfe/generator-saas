@@ -7,8 +7,9 @@ import {
 import resourceLoader from './resource-loader';
 import { ReactRender } from './render';
 import hookConfigs from './hooks/config';
-import MicroAppList from './app-list/config';
+import WeAppList from './app-list/config';
 import { parseAppList } from './app-list/parser';
+import { publishEnv, hostAppName } from './utils/env';
 
 // 设置路由类型
 // 默认为 RouterType.browser
@@ -35,12 +36,12 @@ configHooks(hookConfigs);
 
 // 注册子应用列表
 // 本地开发使用配置
-const localAppListKey: symbol = Symbol.for('microAppsInfo');
+const localAppListKey: symbol = Symbol.for('WeAppList');
 // @ts-ignore
-const localAppList = window[localAppListKey] as any;
+const localAppList = window[localAppListKey] as any || WeAppList;
 // 线上运行使用远程配置文件
-const remoteAppListUrl = '';
-const appList = localAppList || remoteAppListUrl;
+const remoteAppListUrl = hostAppName;
+const appList = publishEnv === 'local' ? localAppList : remoteAppListUrl;
 registerApps(appList, parseAppList);
 
 // 启动微应用框架

@@ -8,21 +8,21 @@ export function Page404() {
 }
 
 export function Page403(props: any) {
-  console.log('403 props', props);
+  window.console.log('403 props', props);
   return (
     <div>
       <h1>This is 403 page</h1>
       <div>原因：
-      {!props.hasOrg && '请创建组织'}
-      {!props.hasOrg && '请签约'}
-      {!props.orgPass && '组织不匹配'}
+        {!props.hasOrg && '请创建组织'}
+        {!props.hasOrg && '请签约'}
+        {!props.orgPass && '组织不匹配'}
       </div>
     </div>
   );
 }
 
 export function Page500(props: any) {
-  console.log('500 props', props);
+  window.console.log('500 props', props);
   return (
     <div>
       <h1>This is 500 page</h1>

@@ -1,3 +1,4 @@
+// @ts-ignore
 window.MicroAppLoader = {
   routerType: '/',
   RouterType: {
