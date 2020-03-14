@@ -4,27 +4,7 @@ export default [
   {
     hookName: 'basicLibs',
     config: {
-      url: [
-        '//at.alicdn.com/t/font_825912_8drbhr0dp7i.css',
-        'https://gw.alipayobjects.com/os/lib/antd/3.25.2/dist/antd.css',
-
-        'https://gw.alipayobjects.com/os/lib/systemjs/6.1.4/dist/extras/named-register.min.js',
-
-        'https://gw.alipayobjects.com/os/lib/moment/2.24.0/min/moment.min.js',
-        'https://gw.alipayobjects.com/os/lib/moment/2.24.0/locale/zh-cn.js',
-
-        'https://gw.alipayobjects.com/os/lib/antd/3.25.2/dist/antd-with-locales.js',
-        'https://gw.alipayobjects.com/os/lib/ant-design/icons/2.1.1/lib/umd.js',
-
-        'https://gw.alipayobjects.com/os/mentor/saas-fetch/2.0.9/umd/saas-fetch-min.js',
-        'https://gw.alipayobjects.com/os/mentor/saas-fetch-choice/1.0.2/umd/saas-fetch-choice-min.js',
-
-        'https://g.alicdn.com/code/npm/@alife/system-react/1.0.1/library/umd/react-min.js',
-        'https://g.alicdn.com/code/npm/@alife/system-react-dom/1.0.0/library/umd/react-dom-min.js',
-        'https://g.alicdn.com/code/npm/@alife/system-antd/1.0.1/library/umd/antd-min.js',
-        'https://g.alicdn.com/code/npm/@alife/system-ant-design-icons/1.0.1/library/umd/ant-design-icons-min.js',
-        'https://g.alicdn.com/code/npm/@alife/system-saas-fetch/1.0.0/library/umd/saas-fetch-min.js',
-      ],
+      url: [],
     },
   },
   {
