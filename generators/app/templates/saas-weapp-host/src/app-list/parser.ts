@@ -33,7 +33,7 @@ const generateWeAppList: AppListParser = async function (name: string, opts = {}
   return urls;
 };
 
-const parseAppList: AppListParser = async function parseAppList(appList: any, opts) {
+const parseAppList: AppListParser = async function parseAppList(appList: any, opts: any) {
   let weAppList: AppConfig[] = [];
   if (!appList || typeof appList === 'string') {
     weAppList = await generateWeAppList(appList, opts);
@@ -43,6 +43,4 @@ const parseAppList: AppListParser = async function parseAppList(appList: any, op
   return weAppList;
 };
 
-export {
-  parseAppList,
-};
+export default parseAppList;
