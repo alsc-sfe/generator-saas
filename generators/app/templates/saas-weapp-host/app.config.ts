@@ -10,7 +10,7 @@ module.exports = {
     analyze: false,
     // dev启动配置
     devServer: {
-      host: 'local.koubei.test',
+      host: 'localhost',
       path: '',
       query: {
       },

@@ -40,8 +40,7 @@ const localAppListKey: symbol = Symbol.for('WeAppList');
 // @ts-ignore
 const localAppList = window[localAppListKey] as any || WeAppList;
 // 线上运行使用远程配置文件
-const remoteAppListUrl = hostAppName;
-const appList = publishEnv === 'local' ? localAppList : remoteAppListUrl;
+const appList = publishEnv === 'local' ? localAppList : hostAppName;
 registerApps(appList, parseAppList);
 
 // 启动微应用框架

@@ -7,6 +7,6 @@ declare global {
   }
 }
 
-export const { publishEnv, hostAppName } = window;
+export const { publishEnv, hostAppName, env } = window;
 
 export const cdnHost = window.cdnBase;
