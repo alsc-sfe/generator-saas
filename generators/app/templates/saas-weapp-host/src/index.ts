@@ -7,6 +7,7 @@ import {
 import { ReactRender } from './render';
 import hookConfigs from './hooks/config';
 import parseAppList from './app-list/parser';
+import './fetch';
 
 // 设置路由类型
 // 默认为 RouterType.browser
