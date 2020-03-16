@@ -26,8 +26,8 @@ const generateWeAppList: AppListParser = async function (name: string, opts = {}
   const { context } = opts;
   const urls: AppConfig[] = await generator({
     name: name || 'boh', // 发布渠道【父应用】名称
-    env,
-    publishEnv, // 当前所在环境，如：project、daily、pre、prod等
+    env: env === 'local' ? '' : env,
+    publishEnv: env === 'local' ? 'prod' : publishEnv, // 当前所在环境，如：project、daily、pre、prod等
     fact: context, // 用来当做灰度命中的匹配条件，可不传
   });
   return urls;
