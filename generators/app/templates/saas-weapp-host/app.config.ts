@@ -1,5 +1,7 @@
 module.exports = {
   appType: 'weAppHost',
+  // 父应用名称，与wap同名
+  hostAppName: 'boh',
   // 页面标题
   title: '云平台',
 
