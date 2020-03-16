@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = function () {
-  const solutionPath = path.join(__dirname, '../templates/saas-microapp');
+  const solutionPath = path.join(__dirname, '../templates/saas-weapp-host');
   const distFolder = this.props.name;
 
   this.fs.copy(
@@ -16,7 +16,6 @@ module.exports = function () {
     '.stylelintignore',
     '.stylelintrc',
     'abc.json',
-    'app.config.ts',
     'commitlint.config.ts',
     'Jenkinsfile',
     'README.md',
@@ -34,7 +33,7 @@ module.exports = function () {
     this.destinationPath(path.join(distFolder, '.gitignore'))
   );
 
-  ['package.json'].forEach(filename => {
+  ['package.json', 'app.config.ts'].forEach(filename => {
     this.fs.copyTpl(
       this.templatePath(`${solutionPath}/${filename}`),
       this.destinationPath(path.join(distFolder, filename)),

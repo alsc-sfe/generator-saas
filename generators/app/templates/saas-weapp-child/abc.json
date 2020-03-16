@@ -1,0 +1,12 @@
+{
+  "type": "saas",
+  "assets": {
+      "type": "builder",
+      "builder": {
+        "name": "@saasfe/builder-we-app",
+        "options": {
+           "source_dest": "dist"
+        }
+      }
+  }
+}

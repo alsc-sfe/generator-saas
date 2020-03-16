@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = function () {
-  const solutionPath = path.join(__dirname, '../templates/saas-microapp');
+  const solutionPath = path.join(__dirname, '../templates/saas-weapp-child');
   const distFolder = this.props.name;
 
   this.fs.copy(
