@@ -4,6 +4,8 @@ module.exports = {
   hostAppName: '<%= name %>',
   // 页面标题
   title: '云平台',
+  // 使用版本引擎，主要用于灰度
+  // useVersionEngine: true,
 
   webpack: {
     // 主题配置
