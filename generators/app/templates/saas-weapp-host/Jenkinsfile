@@ -13,9 +13,9 @@ pipeline {
       steps {
         script{
           sh "echo 'build'"
-          sh 'cnpm install'
+          sh 'npm install --registry http://npm.choicesaas.cn/'
           sh 'ls'
-          sh 'kos build --appName ${appName} --env ${buildEnv} --version ${branchVersion}'
+          sh 'kos build --appName ${appName} --env ${buildEnv} --version ${branchVersion}  --domain ${domain}'
           sh 'ls build'
         }
       }
@@ -32,8 +32,9 @@ pipeline {
   parameters {
     choice(name: 'buildEnv', choices: ['project','daily','pre','prod'], description: '将应用部署到以下环境')
     gitParameter(name: 'gitBranch', defaultValue: 'master', branchFilter: 'origin/(.*)', type: 'PT_BRANCH', listSize: '10')
-    text(name: 'branchVersion', description: '应用迭代号')
-    text(name: 'appName', description: '应用名称')
-    text(name: 'gitUrl', description: '应用git地址')
+    text(name: 'branchVersion', description: '应用迭代号', defaultValue: '')
+    text(name: 'appName', description: '应用名称', defaultValue: '')
+    text(name: 'gitUrl', description: '应用git地址', defaultValue: '')
+    text(name: 'domain', description: '域名key', defaultValue: '')
   }
 }
