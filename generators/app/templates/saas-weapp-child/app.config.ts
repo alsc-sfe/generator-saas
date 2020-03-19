@@ -6,7 +6,7 @@ module.exports = {
   // 父应用名称与wap上保持一致
   // hostApp: 'cdn-child-test',
   // 父应用静态资源地址
-  // hostApp: ['//localhost:8000/index.js'],
+  // hostApp: ['//localhost:8000/index.js', '//localhost:8000/index.css'],
 
   // 路由前缀默认使用 /${microAppName}
   // 需要自定义则设置basename
