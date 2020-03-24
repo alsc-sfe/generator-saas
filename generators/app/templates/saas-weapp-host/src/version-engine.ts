@@ -9,10 +9,13 @@ async function getBaseUrl() {
     fact: {}, // 用来当做灰度命中的匹配条件，可不传
   });
 
-  const hostUrl = `${baseUrl}index.js`;
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = `${baseUrl}index.css`;
+  document.body.appendChild(link);
 
   const script = document.createElement('script');
-  script.src = hostUrl;
+  script.src = `${baseUrl}index.js`;
   document.body.appendChild(script);
 }
 
