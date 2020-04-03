@@ -19,7 +19,9 @@
     "@types/kos-core": "^0.6.0",
     "antd": "3",
     "classnames": "2",
-    "kos-core": "^2.7.2"
+    "kos-core": "^2.7.2",
+    "react": "16.8.6",
+    "react-dom": "16.8.6"
   },
   "devDependencies": {
     "@commitlint/cli": "6",

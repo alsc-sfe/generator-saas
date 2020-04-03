@@ -18,11 +18,9 @@
   "dependencies": {
     "@choicefe/we-app-generator": "^0.x",
     "@saasfe/we-app": "^1.0.5",
-    "@types/react": "^16.9.23",
-    "@types/react-dom": "^16.9.5",
     "classnames": "^2.2.6",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0"
+    "react": "16.8.6",
+    "react-dom": "16.8.6"
   },
   "devDependencies": {
     "@commitlint/cli": "^6.2.0",
